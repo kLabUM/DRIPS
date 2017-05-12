@@ -30,7 +30,6 @@ filepath = strcat('./Data/', 'Site', num2str(Site,'%02.0f'), testfolder, '/');
 mkdir(filepath);
 
 addpath('./DryWeather');
-addpath('./WetWeather');
 
 all_datetime = datetime(FlowTime,'ConvertFrom','epochtime','Epoch','1970-01-01');
 
