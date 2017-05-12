@@ -5,19 +5,19 @@ close all;
 
 Site = 1;
 diurnal_lookback = 1;   % Enter one diurnal/dry-weather lookback period (in months)
-testfolder = '';        % Results will be saved in ./Data/Site[Site][testfolder]/   
+testfolder = '';        % Results will be saved in ./Data/Site[Site][testfolder]/
 
-Fs = 288;	% Sensor sampling frequency (number per day)
+Fs = 288;               % Sensor sampling frequency (number per day)
 
 % Threshold criteria
-slope = 0.25;
-timeSlack = 3;
-stdMax = 0.48;
-stdMin = 0.25;
+slope = 0.25;           % Threshold for slope of a dry-weather diurnal pattern (trough-to-trough)
+timeSlack = 3;          % Threshold for length of a dry-weather diurnal pattern
+stdMax = 0.48;          % Threshold for maximum standard deviation of a dry-weather diurnal pattern
+stdMin = 0.25;          % Threshold for minimum standard deviation of a dry-weather diurnal pattern
 
 % Dry-weather section for learning hyperparameters
-starti = 105121;                            % Start index
-chunk = round(diurnal_lookback*Fs*365/12);	% Lookback length
+starti = 105121;        % Start index
+chunk = round(diurnal_lookback*Fs*365/12);
 endi = starti+chunk;
 section = starti:endi;
 
