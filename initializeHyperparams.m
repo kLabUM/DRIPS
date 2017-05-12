@@ -11,7 +11,7 @@ Fs = 288;               % Sensor sampling frequency (number per day)
 
 % Threshold criteria
 slope = 0.25;           % Threshold for slope of a dry-weather diurnal pattern (trough-to-trough)
-timeSlack = 3;          % Threshold for length of a dry-weather diurnal pattern
+timeSlack = 3;          % Threshold for length of a dry-weather diurnal pattern (hours +/- 24 hours)
 stdMax = 0.48;          % Threshold for maximum standard deviation of a dry-weather diurnal pattern
 stdMin = 0.25;          % Threshold for minimum standard deviation of a dry-weather diurnal pattern
 
