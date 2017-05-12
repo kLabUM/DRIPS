@@ -41,8 +41,8 @@ covfunc = {@covSum, {k2, k3}};
 
 %% Flow filters
 
-filter_diurnal_SOS = load('./diurn_butter_SOS.mat');
-filter_diurnal_G = load('./diurn_butter_G.mat');
+filter_diurnal_SOS = load('./Filter/diurn_butter_SOS.mat');
+filter_diurnal_G = load('./Filter/diurn_butter_G.mat');
 
 %% Remove high frequency noise
 
