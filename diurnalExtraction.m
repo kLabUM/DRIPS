@@ -30,8 +30,8 @@ function [fileCt] = diurnalExtraction(Site, testfolder, nStms, MonthsStep, train
 
     %% Flow Filters
 
-    filter_diurnal_SOS = load('./diurn_butter_SOS.mat'); %diurnalSOS; %
-    filter_diurnal_G = load('./diurn_butter_G.mat'); %diurnalG; %
+    filter_diurnal_SOS = load('./Filter/diurn_butter_SOS.mat'); %diurnalSOS; %
+    filter_diurnal_G = load('./Filter/diurn_butter_G.mat'); %diurnalG; %
 
     %% Fill in raw data
     all_datetime = datetime(trainData.FlowTime,'ConvertFrom','epochtime','Epoch','1970-01-01');
