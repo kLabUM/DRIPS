@@ -1,6 +1,6 @@
 A SELF-CALIBRATING FRAMEWORK FOR THE SENSOR-DRIVEN AND DYNAMICAL MODELING OF COMBINED SEWER SYSTEMS. By Sara Troutman, Nathaniel Schambach, Nancy Love, Branko Kerkez. 2017-05-10
 HOW TO READ ======
-1. Obtain and save historical/training and predicting/testing data.
+1. Obtain and save historical/training and predicting/testing data. An example is provided in Examples.zip.
 1.1. Data should be saved in folder ./Examples/ with names Site[site number]_hist.mat and Site[site number]_pred.mat, respectively.
 2. Run initializeHyperparams.m to learn and save Gaussian Process hyperparameters.
 2.1. In User inputs section, enter Site number and sensor sampling frequency (Fs) of historical/training data.
