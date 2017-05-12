@@ -24,6 +24,9 @@ mkdir(filepath);
 filepath = strcat('./Data/', 'Site', num2str(Site,'%02.0f'), TestFolder, '/');
 mkdir(filepath);
 
+addpath('./DryWeather');
+addpath('./WetWeather');
+
 %% Historical data processing
 
 nhStms = stormSectioning(Site,strcat(TestFolder,'/Hist'),histData,Fs)                   % Number of individual storm events in historical/training data
