@@ -23,7 +23,7 @@ section = starti:endi;
 
 %% File prep
 
-load(strcat('./RawData/', 'Site', num2str(Site),'_hist.mat')); % Historical data
+load(strcat('./Examples/', 'Site', num2str(Site),'_hist.mat')); % Historical data
 filepath = strcat('./Data/');
 mkdir(filepath);
 filepath = strcat('./Data/', 'Site', num2str(Site,'%02.0f'), testfolder, '/');
