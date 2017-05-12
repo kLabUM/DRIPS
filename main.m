@@ -26,21 +26,21 @@ mkdir(filepath);
 
 %% Historical data processing
 
-nhStms = stormSectioning(Site,strcat(TestFolder,'/Hist'),histData,Fs)
+nhStms = stormSectioning(Site,strcat(TestFolder,'/Hist'),histData,Fs)                   % Number of individual storm events in historical/training data
 
-diurnalExtraction(Site,TestFolder,nhStms,diurnal_lookback,histData,histData,'Hist/',Fs)
+diurnalExtraction(Site,TestFolder,nhStms,diurnal_lookback,histData,histData,'Hist/',Fs) % Predict dry-weather flow component for each historical storm event
 disp('Done processing historical data')
 
 %% Predicting data processing
 
-npStms = stormSectioning(Site,strcat(TestFolder,'/Pred'),predData,Fs)
+npStms = stormSectioning(Site,strcat(TestFolder,'/Pred'),predData,Fs)                   % Number of individual storm events in predicting/testing data
 
-diurnalExtraction(Site,TestFolder,npStms,diurnal_lookback,histData,predData,'Pred/',Fs)
+diurnalExtraction(Site,TestFolder,npStms,diurnal_lookback,histData,predData,'Pred/',Fs) % Predict dry-weather flow component for each predicting storm event
 disp('Done processing data to be predicted')
 
 %% System ID
 
-systemIDTimeLookback(Site,hydro_lookback,TestFolder,nhStms,npStms,'Hist/','Pred/',reconstruct,Fs);
+systemIDTimeLookback(Site,hydro_lookback,TestFolder,nhStms,npStms,'Hist/','Pred/',reconstruct,Fs);                  % Predict wet-weather response for each predicting storm event
 disp(strcat('Done with ',num2str(hydro_lookback),'mo',' lookback'))
 
-[meanFits, stdFits, medianFits] = systemIDResults(Site,TestFolder,hydro_lookback,npStms,plotem,reconstruct,'Pred/')
+[meanFits, stdFits, medianFits] = systemIDResults(Site,TestFolder,hydro_lookback,npStms,plotem,reconstruct,'Pred/') % Evaluate predicted wet-weather response (or combined flow) against measured flow
