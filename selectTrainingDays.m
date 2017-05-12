@@ -24,7 +24,6 @@ days = samples/samplesPerDay;
 last = samples - 5/4*samplesPerDay;
 trough2 = 0;
 
-%+/- 2 hours
 timeChanging = samplesPerDay/(24/timeSlack);
 
 shifts = [];
