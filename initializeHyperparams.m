@@ -4,8 +4,8 @@ close all;
 %% User inputs
 
 Site = 1;
-diurnal_lookback = 1;
-testfolder = '';
+diurnal_lookback = 1;   % Enter one diurnal/dry-weather lookback period (in months)
+testfolder = '';        % Results will be saved in ./Data/Site[Site][testfolder]/   
 
 Fs = 288;	% Sensor sampling frequency (number per day)
 
