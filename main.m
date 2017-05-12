@@ -7,8 +7,8 @@ clc
 Site = 1;
 TestFolder = '';        % Results will be saved in ./Data/Site[Site][TestFolder]/
 
-histData = load(strcat('./RawData/Site',num2str(Site),'_hist.mat')); % Historical data
-predData = load(strcat('./RawData/Site',num2str(Site),'_pred.mat')); % Data for prediction
+histData = load(strcat('./Examples/Site',num2str(Site),'_hist.mat')); % Historical data
+predData = load(strcat('./Examples/Site',num2str(Site),'_pred.mat')); % Data for prediction
 
 Fs = 288;               % Sensor sampling frequency (number per day)
 
