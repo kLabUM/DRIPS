@@ -1,6 +1,8 @@
 ## A self-calibrating framework for the sensor-driven and dynamical modeling of combined sewer systems
 Sara C. Troutman, Nathaniel Schambach, Nancy G. Love, Branko Kerkez
 
+Publication DOI: [10.1016/j.watres.2017.08.065](https://doi.org/10.1016/j.watres.2017.08.065)
+
 The recent availability and affordability of sensors and wireless communications is poised to transform our understanding and management of water systems.
 This will enable a new generation of adaptive water models that can ingest large quantities of sensor feeds and provide the best possible estimates of current and future conditions.
 To that end, this paper presents a novel sensor-driven identification/learning framework for combined sewer and stormwater systems.
